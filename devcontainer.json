@@ -1,0 +1,25 @@
+{
+    "name": "React TypeScript Dev Container",
+    "context": "..",
+    "dockerFile": "Dockerfile",
+    "appPort": [3000],
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "dbaeumer.vscode-eslint",
+          "esbenp.prettier-vscode",
+          "ms-vscode.vscode-typescript-next",
+          "MS-CEINTL.vscode-language-pack-ja"
+        ],
+        "settings": {
+          "terminal.integrated.shell.linux": "/bin/sh"
+        }
+      }
+    },
+    "remoteUser": "node",
+    "mounts": [
+      "source=${localEnv:HOME}/.vscode/extensions,target=/home/node/.vscode-server/extensions,type=bind",
+      "source=${localEnv:HOME}/.vscode/extensions,target=/home/node/.vscode/extensions,type=bind"
+    ]
+  }
+  
